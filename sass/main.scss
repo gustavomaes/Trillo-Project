@@ -13,8 +13,11 @@
 
 
 //Layout
+@import "layout/container";
 @import "layout/header";
+@import "layout/sidebar";
+@import "layout/content";
 @import "layout/footer";
 
 //Pages
-@import "pages/home";
+@import "pages/hotel-view";

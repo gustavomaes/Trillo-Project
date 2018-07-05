@@ -8,7 +8,8 @@
   --color-gray-light-4: #ccc;
   --color-gray-dark-1: #333;
   --color-gray-dark-2: #777;
-  --color-gray-dark-3: #999; }
+  --color-gray-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3); }
 
 *,
 *::after,
@@ -26,3 +27,25 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-gray-dark-2); }
+
+.container {
+  max-width: 100%;
+  background-color: var(--color-gray-light-1);
+  box-shadow: var(--shadow-dark);
+  min-height: 100%; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-gray-light-2); }
+
+.sidebar {
+  background-color: var(--color-gray-dark-1);
+  flex: 0 0 18%; }
+
+.content {
+  display: flex; }
+
+.hotel-view {
+  background-color: var(--color-primary);
+  flex: 1; }
