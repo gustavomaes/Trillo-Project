@@ -1,0 +1,10 @@
+.gallery {
+
+    display: flex;
+    flex-direction: row;
+    
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}

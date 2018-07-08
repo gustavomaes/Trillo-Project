@@ -11,12 +11,19 @@
 
 //Components
 @import "components/side-navigation";
+@import "components/gallery";
+@import "components/overview";
+@import "components/button";
+@import "components/list";
+@import "components/review";
+@import "components/cta";
 
 
 //Layout
 @import "layout/container";
 @import "layout/header";
 @import "layout/sidebar";
+@import "layout/detail";
 @import "layout/content";
 @import "layout/footer";
 
