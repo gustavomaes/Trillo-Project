@@ -23,6 +23,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 @keyframes pulsate {
   0% {
@@ -49,10 +52,21 @@ body {
   margin-top: 3.5rem;
   flex: 1;
   flex-direction: column; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      flex-direction: row;
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -78,17 +92,34 @@ body {
     z-index: 10;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem .5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-gray-light-4);
   text-align: center;
   padding: 2.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex;
@@ -108,6 +139,13 @@ body {
     text-transform: uppercase;
     letter-spacing: .1rem;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
+    @media only screen and (max-width: 26.875em) {
+      .overview__heading {
+        font-size: 1.5rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -115,6 +153,10 @@ body {
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary); }
+    @media only screen and (max-width: 26.875em) {
+      .overview__icon {
+        width: 1.2rem;
+        height: 1.2rem; } }
   .overview__location {
     font-size: 1.4rem;
     display: flex;
@@ -130,13 +172,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem;
+        text-align: center; } }
+    @media only screen and (max-width: 26.875em) {
+      .overview__rating {
+        display: none; } }
     .overview__rating--average {
       font-size: 2.25rem;
       font-weight: 300;
       margin-bottom: -.6rem; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating--average {
+          font-size: 1.8rem; } }
     .overview__rating--count {
       font-size: .8rem;
       text-transform: uppercase; }
+      @media only screen and (max-width: 37.5em) {
+        .overview__rating--count {
+          font-size: .5rem; } }
 
 .btn-inline {
   border: none;
@@ -148,6 +203,10 @@ body {
   display: inline-block;
   cursor: pointer;
   transition: all .2s; }
+  @media only screen and (max-width: 26.875em) {
+    .btn-inline {
+      font-size: .8rem;
+      margin-right: 1rem; } }
   .btn-inline span {
     margin-left: .3rem;
     transition: margin-left .2s; }
@@ -201,8 +260,12 @@ body {
   display: flex;
   flex-wrap: wrap; }
   .list__item {
+    font-size: 1.3rem;
     flex: 0 0 50%;
     margin-bottom: .7rem; }
+    @media only screen and (max-width: 26.875em) {
+      .list__item {
+        flex: 0 0 100%; } }
     .list__item::before {
       content: "";
       display: inline-block;
@@ -222,6 +285,10 @@ body {
   margin-bottom: 3.5rem;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 56.25em) {
+    .review {
+      padding: 2rem;
+      margin-bottom: 3rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 10;
@@ -263,6 +330,9 @@ body {
   padding: 3.5rem 0;
   text-align: center;
   background-color: #fff; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 2.5rem 0; } }
   .cta__book-now {
     font-size: 2rem;
     font-weight: 300;
@@ -282,6 +352,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 11rem; } }
 
 .logo {
   height: 3.25rem;
@@ -292,6 +367,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-gray-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -373,12 +453,26 @@ body {
   padding: 4.5rem;
   border-bottom: var(--line);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
   .detail__description {
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
     flex: 0 0 60%;
     margin-right: 4.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .detail__description {
+        padding: 2rem;
+        margin-right: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .detail__description {
+        margin-right: 0;
+        margin-bottom: 3rem; } }
   .detail__user-reviews {
     flex: 1;
     display: flex;
@@ -391,6 +485,8 @@ body {
     align-items: center; }
     .detail__recommend--count {
       margin-right: 1.5rem; }
+    .detail__recommend--friends {
+      display: flex; }
     .detail__recommend--photo {
       box-sizing: content-box;
       height: 4rem;
@@ -398,11 +494,14 @@ body {
       border-radius: 50%;
       border: .3rem solid #fff; }
       .detail__recommend--photo:not(:last-child) {
-        margin-right: -1.5rem; }
+        margin-right: -2rem; }
 
 .content {
   display: flex;
   flex: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .content {
+      flex-direction: column; } }
 
 .hotel-view {
   background-color: var(--color-gray-light-1);

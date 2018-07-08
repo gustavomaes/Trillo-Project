@@ -1,4 +1,9 @@
 .content {
     display: flex;
     flex: 1;
+
+    
+    @include respond(bp-medium) {
+        flex-direction: column;
+    }
 }

@@ -9,6 +9,11 @@
     cursor: pointer;
     transition: all .2s;
 
+    @include respond(bp-micro) {
+        font-size: .8rem;
+        margin-right: 1rem;
+    }
+
     & span {
         margin-left: .3rem;
         transition: margin-left .2s;

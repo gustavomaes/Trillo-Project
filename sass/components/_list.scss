@@ -9,9 +9,13 @@
     flex-wrap: wrap;
 
     &__item {
+        font-size: 1.3rem;
         flex: 0 0 50%;
         margin-bottom: .7rem;
 
+        @include respond(bp-micro) {
+            flex: 0 0 100%;
+        }
         &::before {
             content: "";
             display: inline-block;
